@@ -1,6 +1,7 @@
 package fr.iutgon.ctp.controleurs;
 
 import fr.iutgon.ctp.modele.Pendu;
+import fr.iutgon.ctp.modele.Scores;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -45,6 +46,8 @@ public class VueController implements Initializable {
 
     public Pendu pendu;
 
+    private Scores scores = new Scores();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         pendu = new Pendu();
@@ -65,9 +68,7 @@ public class VueController implements Initializable {
         });
 
         ctp_aide_scores.addEventHandler(ActionEvent.ACTION, event -> {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Pendu Score");
-            alert.show();
+            scores.show();
         });
 
         ctp_partie_nouvelle.addEventHandler(ActionEvent.ACTION, event -> {
@@ -81,6 +82,7 @@ public class VueController implements Initializable {
             alert.setHeaderText("Pendu Perdu");
             alert.show();
             disableAllButtons();
+            scores.add(pendu.getPartie());
         });
     }
 
@@ -114,6 +116,7 @@ public class VueController implements Initializable {
                     alert.setHeaderText("Pendu Gagne");
                     alert.show();
                     disableAllButtons();
+                    scores.add(pendu.getPartie());
                 }
             });
         }
