@@ -3,4 +3,5 @@ module tpNote {
   requires javafx.controls;
 
   exports fr.iutgon.ctp;
+    exports fr.iutgon.ctp.controleurs;
 }

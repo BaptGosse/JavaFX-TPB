@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+<AnchorPane fx:controller="fr.iutgon.ctp.controleurs.PotenceController" prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
 >
     <Rectangle fx:id="corde" arcHeight="5.0" arcWidth="5.0" fill="#f5cc00" height="67.0" layoutX="344.0" layoutY="46.0"
                stroke="BLACK" strokeType="INSIDE" width="6.0" AnchorPane.rightAnchor="150.0"
